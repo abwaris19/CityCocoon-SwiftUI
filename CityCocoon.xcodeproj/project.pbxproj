@@ -14,6 +14,9 @@
 		C966A3232B3CDB9500670659 /* CityCocoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3222B3CDB9500670659 /* CityCocoonTests.swift */; };
 		C966A32D2B3CDB9500670659 /* CityCocoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A32C2B3CDB9500670659 /* CityCocoonUITests.swift */; };
 		C966A32F2B3CDB9500670659 /* CityCocoonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A32E2B3CDB9500670659 /* CityCocoonUITestsLaunchTests.swift */; };
+		C966A3482B3CE65000670659 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3472B3CE65000670659 /* ExploreView.swift */; };
+		C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3492B3CE6F300670659 /* ListingItemView.swift */; };
+		C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A38B2B3E310A00670659 /* SearchAndFilterBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		C966A3282B3CDB9500670659 /* CityCocoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityCocoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C966A32C2B3CDB9500670659 /* CityCocoonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCocoonUITests.swift; sourceTree = "<group>"; };
 		C966A32E2B3CDB9500670659 /* CityCocoonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCocoonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C966A3472B3CE65000670659 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		C966A3492B3CE6F300670659 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
+		C966A38B2B3E310A00670659 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,11 @@
 		C966A30F2B3CDB9300670659 /* CityCocoon */ = {
 			isa = PBXGroup;
 			children = (
-				C966A3102B3CDB9300670659 /* CityCocoonApp.swift */,
+				C966A33E2B3CDD8C00670659 /* App */,
+				C966A33D2B3CDD8800670659 /* Core */,
+				C966A33C2B3CDD8100670659 /* Extensions */,
+				C966A33B2B3CDD7C00670659 /* Models */,
+				C966A33F2B3CDDFF00670659 /* Utils */,
 				C966A3122B3CDB9300670659 /* ContentView.swift */,
 				C966A3142B3CDB9500670659 /* Assets.xcassets */,
 				C966A3162B3CDB9500670659 /* CityCocoon.entitlements */,
@@ -127,6 +137,101 @@
 				C966A32E2B3CDB9500670659 /* CityCocoonUITestsLaunchTests.swift */,
 			);
 			path = CityCocoonUITests;
+			sourceTree = "<group>";
+		};
+		C966A33B2B3CDD7C00670659 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C966A33C2B3CDD8100670659 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C966A33D2B3CDD8800670659 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3402B3CDE8C00670659 /* Explore */,
+				C966A3412B3CDE9A00670659 /* Listings */,
+				C966A3422B3CDEB100670659 /* MapView */,
+				C966A3432B3CDEBA00670659 /* Profile */,
+				C966A3442B3CDEC300670659 /* Root */,
+				C966A3452B3CDECB00670659 /* ToolBar */,
+				C966A3462B3CDED900670659 /* Wishlists */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C966A33E2B3CDD8C00670659 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3102B3CDB9300670659 /* CityCocoonApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C966A33F2B3CDDFF00670659 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C966A3402B3CDE8C00670659 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3472B3CE65000670659 /* ExploreView.swift */,
+				C966A38B2B3E310A00670659 /* SearchAndFilterBar.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		C966A3412B3CDE9A00670659 /* Listings */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3492B3CE6F300670659 /* ListingItemView.swift */,
+			);
+			path = Listings;
+			sourceTree = "<group>";
+		};
+		C966A3422B3CDEB100670659 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		C966A3432B3CDEBA00670659 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C966A3442B3CDEC300670659 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		C966A3452B3CDECB00670659 /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ToolBar;
+			sourceTree = "<group>";
+		};
+		C966A3462B3CDED900670659 /* Wishlists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wishlists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +364,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
 				C966A3132B3CDB9300670659 /* ContentView.swift in Sources */,
+				C966A3482B3CE65000670659 /* ExploreView.swift in Sources */,
+				C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */,
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import SwiftUI
 struct CityCocoonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ExploreView()
         }
     }
 }
