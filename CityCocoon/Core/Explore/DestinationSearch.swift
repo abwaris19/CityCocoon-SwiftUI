@@ -7,9 +7,21 @@
 
 import SwiftUI
 
+enum DestinationSearchOption{
+    
+    case location
+    case dates
+    case guests
+}
 struct DestinationSearch: View {
     @Binding  var isShow: Bool
     @State var destination: String = ""
+    
+    @State private var selectedOption: DestinationSearchOption  = .location
+    @State private var datesOption: DestinationSearchOption  = .dates
+    @State private var guestsOption: DestinationSearchOption  = .guests
+   
+   
     var body: some View {
        
         VStack {
@@ -26,29 +38,110 @@ struct DestinationSearch: View {
             })
          
             VStack (alignment: .leading) {
-                Text("Where to?")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .imageScale(.small)
-                    TextField("Search Destination", text: $destination)
-                        .font(.subheadline)
-                        
-                }.frame( height: 44)
-                    .padding(.horizontal)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(lineWidth: 1)
-                            .foregroundStyle(.gray)
+                if selectedOption == .location  {
+                    Text("Where to?")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .imageScale(.small)
+                        TextField("Search Destination", text: $destination)
+                            .font(.subheadline)
                             
-                    }.padding(.horizontal)
-            }
+                    }.frame( height: 44)
+                        .padding(.horizontal)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(lineWidth: 1)
+                                .foregroundStyle(Color(.systemGray4))
+                                
+                        }
+                  
+                } else
+                {
+                        CollapesPickerView(title: "Where", description: "Add Destination")
+                    }
+           
+            }.padding()
+                .frame(height: selectedOption == .location ? 120: 64)
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding()
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .onTapGesture {
+                    
+                    withAnimation(.snappy) { selectedOption = .location}
+                }
+            
+            VStack {
+                if selectedOption == .dates {
+                    Text("Show expended View")
+                    Spacer()
+                }
+                else {
+                    CollapesPickerView(title: "when", description: "Add Dates")
+                    }
+                } .padding()
+                .frame(height: selectedOption == .dates ? 120: 64)
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding()
+                .shadow(radius: 10)
+                .onTapGesture {
+                    
+                    withAnimation(.snappy) { selectedOption = .dates}
+                }
         }
+            VStack {
+                if selectedOption == .guests {
+                    
+                    Text("Show expended View")
+                    Spacer()
+                }
+                else {
+                    CollapesPickerView(title: "Who", description: "Add Guest") .onTapGesture {
+                        
+                        withAnimation(.snappy) { selectedOption = .guests}
+                    }
+                }
+            }
+            .padding()
+            .frame(height: selectedOption == .guests ? 120: 64)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding()
+            .shadow(radius: 10)
+            .onTapGesture {
+                
+                withAnimation(.snappy) { selectedOption = .guests}
+            }
+            
+          
+            
+        
+        
     }
 }
 
 #Preview {
     DestinationSearch(isShow: .constant(false))
+}
+
+struct CollapesPickerView: View {
+    let title: String
+    let description: String
+    var body: some View {
+        VStack {
+            HStack {
+                
+                Text(title)
+                    .foregroundStyle(.gray)
+                Spacer()
+                
+                Text(description)
+            }.fontWeight(.semibold)
+                .font(.subheadline)
+        }
+    }
 }
