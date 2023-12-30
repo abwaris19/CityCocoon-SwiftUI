@@ -17,6 +17,9 @@
 		C966A3482B3CE65000670659 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3472B3CE65000670659 /* ExploreView.swift */; };
 		C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3492B3CE6F300670659 /* ListingItemView.swift */; };
 		C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A38B2B3E310A00670659 /* SearchAndFilterBar.swift */; };
+		C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A38D2B3ECC1900670659 /* ListingDetailView.swift */; };
+		C966A3912B3ECD7A00670659 /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3902B3ECD7A00670659 /* ListingImageCarouselView.swift */; };
+		C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3962B40CF9800670659 /* DestinationSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		C966A3472B3CE65000670659 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		C966A3492B3CE6F300670659 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
 		C966A38B2B3E310A00670659 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
+		C966A38D2B3ECC1900670659 /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
+		C966A3902B3ECD7A00670659 /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
+		C966A3962B40CF9800670659 /* DestinationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 		C966A33D2B3CDD8800670659 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C966A38F2B3ECD1C00670659 /* Component */,
 				C966A3402B3CDE8C00670659 /* Explore */,
 				C966A3412B3CDE9A00670659 /* Listings */,
 				C966A3422B3CDEB100670659 /* MapView */,
@@ -187,6 +194,7 @@
 			children = (
 				C966A3472B3CE65000670659 /* ExploreView.swift */,
 				C966A38B2B3E310A00670659 /* SearchAndFilterBar.swift */,
+				C966A3962B40CF9800670659 /* DestinationSearch.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C966A3492B3CE6F300670659 /* ListingItemView.swift */,
+				C966A38D2B3ECC1900670659 /* ListingDetailView.swift */,
 			);
 			path = Listings;
 			sourceTree = "<group>";
@@ -232,6 +241,14 @@
 			children = (
 			);
 			path = Wishlists;
+			sourceTree = "<group>";
+		};
+		C966A38F2B3ECD1C00670659 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3902B3ECD7A00670659 /* ListingImageCarouselView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,10 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C966A3912B3ECD7A00670659 /* ListingImageCarouselView.swift in Sources */,
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
+				C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */,
 				C966A3132B3CDB9300670659 /* ContentView.swift in Sources */,
 				C966A3482B3CE65000670659 /* ExploreView.swift in Sources */,
 				C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */,
+				C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */,
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,30 +8,46 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @State private var showDestinationSearchView = false
+  
     var body: some View {
        
-        NavigationView {
+        NavigationStack {
             
-            ScrollView
+            if showDestinationSearchView {
+                withAnimation(.snappy) {
+                    DestinationSearch(isShow: $showDestinationSearchView)
+                }
+            }
+            else
             {
-                SearchAndFilterBar()
-                LazyVStack (spacing: 32) {
-                    
-                    ForEach(0...10, id: \.self) { listing in
-                      
-                        NavigationLink(destination: Text("Hello \(listing)")) {
-                            
-                            ListingItemView()
-                                .frame(height: 400)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                ScrollView
+                {
+                    SearchAndFilterBar()
+                        .onTapGesture {
+                            withAnimation(.snappy) {
+                                showDestinationSearchView.toggle()
+                            }
                         }
-                    }
-                
-                }.padding()
+                    LazyVStack (spacing: 32) {
+                        
+                        ForEach(0...10, id: \.self) { listing in
+                          
+                            NavigationLink(destination: ListingDetailView().navigationBarBackButtonHidden()) {
+                                
+                                ListingItemView()
+                                    .frame(height: 400)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                        }
+                    
+                    }.padding(.horizontal, 10)
+                }
+                .navigationDestination(for: Int.self) { listing in
+                    Text("Listing detial view....")
+                }
             }
-            .navigationDestination(for: Int.self) { listing in
-                Text("Listing detial view....")
-            }
+          
           
         }
         
