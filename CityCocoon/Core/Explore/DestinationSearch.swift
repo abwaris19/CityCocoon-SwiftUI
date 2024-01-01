@@ -20,6 +20,8 @@ struct DestinationSearch: View {
     @State private var selectedOption: DestinationSearchOption  = .location
     @State private var datesOption: DestinationSearchOption  = .dates
     @State private var guestsOption: DestinationSearchOption  = .guests
+    @State private var startDate = Date()
+    @State private var endDate = Date()
    
    
     var body: some View {
@@ -74,16 +76,27 @@ struct DestinationSearch: View {
                     withAnimation(.snappy) { selectedOption = .location}
                 }
             
-            VStack {
+            VStack (alignment: .leading) {
                 if selectedOption == .dates {
-                    Text("Show expended View")
-                    Spacer()
+                    
+                    Text("When's your trip?")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    VStack {
+                        DatePicker("From", selection: $startDate, displayedComponents: .date)
+                        Divider()
+                        DatePicker("To", selection: $endDate, displayedComponents: .date)
+                    }
+                    .foregroundStyle(.gray)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
                 }
                 else {
                     CollapesPickerView(title: "when", description: "Add Dates")
                     }
                 } .padding()
-                .frame(height: selectedOption == .dates ? 120: 64)
+                .frame(height: selectedOption == .dates ? 180: 64)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .padding()
