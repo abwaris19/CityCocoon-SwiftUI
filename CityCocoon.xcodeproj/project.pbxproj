@@ -22,6 +22,7 @@
 		C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3962B40CF9800670659 /* DestinationSearch.swift */; };
 		C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A39C2B43CF4000670659 /* ProfileView.swift */; };
 		C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A39E2B43D1B200670659 /* ProfileOptionView.swift */; };
+		C966A3A12B451C4900670659 /* WishlistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3A02B451C4900670659 /* WishlistsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C966A3962B40CF9800670659 /* DestinationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearch.swift; sourceTree = "<group>"; };
 		C966A39C2B43CF4000670659 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C966A39E2B43D1B200670659 /* ProfileOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionView.swift; sourceTree = "<group>"; };
+		C966A3A02B451C4900670659 /* WishlistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 		C966A3462B3CDED900670659 /* Wishlists */ = {
 			isa = PBXGroup;
 			children = (
+				C966A3A02B451C4900670659 /* WishlistsView.swift */,
 			);
 			path = Wishlists;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */,
 				C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */,
 				C966A3132B3CDB9300670659 /* ContentView.swift in Sources */,
+				C966A3A12B451C4900670659 /* WishlistsView.swift in Sources */,
 				C966A3482B3CE65000670659 /* ExploreView.swift in Sources */,
 				C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */,
 				C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */,
