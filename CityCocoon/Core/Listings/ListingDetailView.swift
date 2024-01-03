@@ -10,7 +10,7 @@ import MapKit
 
 struct ListingDetailView: View {
     
-    @Environment (\.dismiss) var dismiss
+    @Environment (\.presentationMode) var dismiss
     var body: some View {
        
         ScrollView {
@@ -21,7 +21,8 @@ struct ListingDetailView: View {
                 
                 Button(action: {
                         
-                    dismiss()
+                    dismiss.wrappedValue.dismiss()
+                    print("Close")
                     
                 }, label: {
                     Image(systemName: "chevron.left")
@@ -214,7 +215,7 @@ struct ListingDetailView: View {
                     Button(action: {
                         
                     }, label: {
-                        /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/.foregroundStyle(.white)
+                        Text("Reserve").foregroundStyle(.white)
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .frame(width: 140, height: 40)

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct ProfileOptionView: View {
+    
+    let imageName: String
+    let title: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        HStack {
+            Image(systemName: imageName)
+            Text(title)
+            Spacer()
+            Image(systemName: "chevron.right")
+        }.padding()
+        
+        Divider()
     }
 }
 
 #Preview {
-    ProfileOptionView()
+    ProfileOptionView(imageName: "gear", title: "Settings")
 }

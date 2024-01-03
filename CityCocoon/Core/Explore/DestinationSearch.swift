@@ -148,6 +148,8 @@ struct DestinationSearch: View {
                 
                 withAnimation(.snappy) { selectedOption = .guests}
             }
+        
+        Spacer()
             
           
             
