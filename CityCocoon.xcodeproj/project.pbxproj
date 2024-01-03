@@ -23,6 +23,9 @@
 		C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A39C2B43CF4000670659 /* ProfileView.swift */; };
 		C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A39E2B43D1B200670659 /* ProfileOptionView.swift */; };
 		C966A3A12B451C4900670659 /* WishlistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3A02B451C4900670659 /* WishlistsView.swift */; };
+		C966A3A32B4520C800670659 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3A22B4520C800670659 /* MainTabView.swift */; };
+		C966A3A72B45EF9500670659 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3A62B45EF9500670659 /* Listing.swift */; };
+		C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3A82B45F3D900670659 /* Developer Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		C966A39C2B43CF4000670659 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C966A39E2B43D1B200670659 /* ProfileOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionView.swift; sourceTree = "<group>"; };
 		C966A3A02B451C4900670659 /* WishlistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistsView.swift; sourceTree = "<group>"; };
+		C966A3A22B4520C800670659 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		C966A3A62B45EF9500670659 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		C966A3A82B45F3D900670659 /* Developer Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Developer Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 		C966A33C2B3CDD8100670659 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C966A3A82B45F3D900670659 /* Developer Preview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,8 +215,8 @@
 		C966A3412B3CDE9A00670659 /* Listings */ = {
 			isa = PBXGroup;
 			children = (
-				C966A3492B3CE6F300670659 /* ListingItemView.swift */,
-				C966A38D2B3ECC1900670659 /* ListingDetailView.swift */,
+				C966A3A52B45EF7A00670659 /* View */,
+				C966A3A42B45EF6C00670659 /* Model */,
 			);
 			path = Listings;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 		C966A3452B3CDECB00670659 /* ToolBar */ = {
 			isa = PBXGroup;
 			children = (
+				C966A3A22B4520C800670659 /* MainTabView.swift */,
 			);
 			path = ToolBar;
 			sourceTree = "<group>";
@@ -258,6 +266,23 @@
 				C966A3902B3ECD7A00670659 /* ListingImageCarouselView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		C966A3A42B45EF6C00670659 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3A62B45EF9500670659 /* Listing.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C966A3A52B45EF7A00670659 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3492B3CE6F300670659 /* ListingItemView.swift */,
+				C966A38D2B3ECC1900670659 /* ListingDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,15 +417,18 @@
 			files = (
 				C966A3912B3ECD7A00670659 /* ListingImageCarouselView.swift in Sources */,
 				C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */,
+				C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */,
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
 				C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */,
 				C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */,
 				C966A3132B3CDB9300670659 /* ContentView.swift in Sources */,
 				C966A3A12B451C4900670659 /* WishlistsView.swift in Sources */,
+				C966A3A72B45EF9500670659 /* Listing.swift in Sources */,
 				C966A3482B3CE65000670659 /* ExploreView.swift in Sources */,
 				C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */,
 				C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */,
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
+				C966A3A32B4520C800670659 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
