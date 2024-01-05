@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ListingItemView: View {
     
-    
+    let listing: Listing
     var body: some View {
        
         VStack(spacing: 8) {
             
             // images
             
-            ListingImageCarouselView()
+            ListingImageCarouselView(listing: listing)
          
             // listing detils
             
@@ -26,24 +26,24 @@ struct ListingItemView: View {
                 
                 VStack (alignment: .leading) {
                     
-                    Text("Winterthur, Zurich")
+                    Text("\(listing.city), \(listing.state)")
                         .fontWeight(.semibold)
                         .foregroundStyle(.black)
-                    Text("Zurich HB, Zurich")
+                    Text("12 mi away")
                         .foregroundStyle(.gray)
-                    
                     .foregroundStyle(.black)
-                    Text("Zurich Stadt, 8001")
                     
+                    
+                    Text("Nov 3 - 10")
                     .foregroundStyle(.black)
                        
                     
                     HStack
                     {
-                        Text("2700 CHF")
+                        Text("$\(listing.pricePerNight)")
                             .fontWeight(.semibold)
                         
-                        Text("Monthly")
+                        Text("night")
                     }
                     .foregroundStyle(.black)
                     
@@ -68,5 +68,5 @@ struct ListingItemView: View {
 }
 
 #Preview {
-    ListingItemView()
+    ListingItemView(listing: DeveloperPreview.shared.listings[0])
 }

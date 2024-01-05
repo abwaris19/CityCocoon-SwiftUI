@@ -8,7 +8,7 @@
 import Foundation
 
 class DeveloperPreview {
-    
+    static let shared = DeveloperPreview()
     
     var listings: [Listing] = [
         .init(

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Listing: Identifiable, Codable {
+struct Listing: Identifiable, Codable, Hashable {
     var id = NSUUID().uuidString
     let ownerUid: String
     let ownerName: String
