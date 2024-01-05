@@ -28,6 +28,7 @@
 		C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3A82B45F3D900670659 /* Developer Preview.swift */; };
 		C966A3AE2B47F04F00670659 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3AD2B47F04F00670659 /* ExploreViewModel.swift */; };
 		C966A3B02B47F0F200670659 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3AF2B47F0F200670659 /* ExploreService.swift */; };
+		C966A4332B48A7E600670659 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A4322B48A7E600670659 /* Region.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		C966A3A82B45F3D900670659 /* Developer Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Developer Preview.swift"; sourceTree = "<group>"; };
 		C966A3AD2B47F04F00670659 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		C966A3AF2B47F0F200670659 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
+		C966A4322B48A7E600670659 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C966A3A82B45F3D900670659 /* Developer Preview.swift */,
+				C966A4322B48A7E600670659 /* Region.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C966A3912B3ECD7A00670659 /* ListingImageCarouselView.swift in Sources */,
+				C966A4332B48A7E600670659 /* Region.swift in Sources */,
 				C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */,
 				C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */,
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,

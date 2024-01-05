@@ -17,7 +17,7 @@ struct ListingDetailView: View {
     init(listing: Listing) {
         self.listing = listing
         
-        let region = MKCoordinateRegion( center: CLLocationCoordinate2D(latitude: 25.7602, longitude: -80.1959), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        let region = MKCoordinateRegion( center: listing.city == "Los Angeles" ? .losAngeles : .miami , span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         self._cameraPosition = State(initialValue: .region(region))
     }
     var body: some View {
@@ -191,7 +191,7 @@ struct ListingDetailView: View {
             VStack (alignment: .leading, spacing: 16) {
                 Text("Where you will be")
                     .font(.headline)
-               Map()
+                Map(position: $cameraPosition)
                     .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }.padding()
