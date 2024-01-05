@@ -12,6 +12,14 @@ struct ListingDetailView: View {
     
     @Environment (\.presentationMode) var dismiss
     var listing: Listing
+    @State private var cameraPosition : MapCameraPosition
+    
+    init(listing: Listing) {
+        self.listing = listing
+        
+        let region = MKCoordinateRegion( center: CLLocationCoordinate2D(latitude: 25.7602, longitude: -80.1959), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        self._cameraPosition = State(initialValue: .region(region))
+    }
     var body: some View {
        
         ScrollView {
