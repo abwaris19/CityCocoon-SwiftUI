@@ -17,7 +17,8 @@ struct ExploreView: View {
             
             if showDestinationSearchView {
                 withAnimation(.snappy) {
-                    DestinationSearch(isShow: $showDestinationSearchView)
+                    DestinationSearch(isShow: $showDestinationSearchView, viewModel: viewModel)
+                        
                 }
             }
             else
