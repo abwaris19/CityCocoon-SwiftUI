@@ -17,10 +17,10 @@ struct SearchAndFilterBar: View {
             Image(systemName: "magnifyingglass")
             
             VStack (alignment: .leading, spacing: 2) {
-                Text("Where To?")
+                Text(location.isEmpty ? "Where To?" : location)
                     .font(.footnote)
                     .fontWeight(.semibold)
-                Text("Anywhere - Any Week - Add guests")
+                Text("\(location.isEmpty ? "Anywhere - " : "" )Any Week - Add guests")
                     .font(.caption2)
                     .foregroundStyle(.gray)
                 
