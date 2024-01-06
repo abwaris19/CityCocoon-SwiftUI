@@ -67,6 +67,10 @@ struct DestinationSearch: View {
                             .imageScale(.small)
                         TextField("Search Destination", text: $destination)
                             .font(.subheadline)
+                            .onSubmit {
+                                
+                                print("Update listings")
+                            }
                             
                     }.frame( height: 44)
                         .padding(.horizontal)
