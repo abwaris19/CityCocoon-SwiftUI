@@ -34,7 +34,9 @@ struct DestinationSearch: View {
                 Button(action: {
                
                     withAnimation(.snappy) {
+                        viewModel.updateListingsForLocation()
                         isShow.toggle()
+                        
                     }
                 }, label: {
                     Image(systemName: "xmark.circle")
@@ -45,6 +47,7 @@ struct DestinationSearch: View {
                     if !viewModel.searchLocation.isEmpty {
                         Button(action: {
                             viewModel.searchLocation = ""
+                            viewModel.updateListingsForLocation()
                         }, label: {
                             Text("Clear")
                                 .foregroundStyle(.black)

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SearchAndFilterBar: View {
+    
+    @Binding var location: String
     var body: some View {
        
         HStack{
@@ -45,5 +47,5 @@ struct SearchAndFilterBar: View {
 }
 
 #Preview {
-    SearchAndFilterBar()
+    SearchAndFilterBar(location: .constant("Los Angeles"))
 }

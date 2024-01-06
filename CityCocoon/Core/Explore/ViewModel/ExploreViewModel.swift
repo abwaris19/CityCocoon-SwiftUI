@@ -11,6 +11,7 @@ class ExploreViewModel: ObservableObject {
     @Published var listings = [Listing]()
     @Published var searchLocation = ""
     private let service: ExploreService
+    private var listingsCopy = [Listing]()
     init(service: ExploreService) {
         self.service = service
         
@@ -24,6 +25,7 @@ class ExploreViewModel: ObservableObject {
         
         do {
             self.listings = try await service.fetchListings()
+            self.listingsCopy = listings
         }
         catch {
             print("DEBUG: Failed to fetch listings with error: \(error.localizedDescription)")
@@ -37,7 +39,7 @@ class ExploreViewModel: ObservableObject {
             $0.state.lowercased() == searchLocation.lowercased()
         })
         
-        self.listings = filterListings.isEmpty ? listings : filterListings
+        self.listings = filterListings.isEmpty ? listingsCopy : filterListings
     }
     
     
