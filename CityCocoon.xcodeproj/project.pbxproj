@@ -29,6 +29,7 @@
 		C966A3AE2B47F04F00670659 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3AD2B47F04F00670659 /* ExploreViewModel.swift */; };
 		C966A3B02B47F0F200670659 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3AF2B47F0F200670659 /* ExploreService.swift */; };
 		C966A4332B48A7E600670659 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A4322B48A7E600670659 /* Region.swift */; };
+		C966A4412B4B2D6C00670659 /* ListingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A4402B4B2D6C00670659 /* ListingMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C966A3AD2B47F04F00670659 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		C966A3AF2B47F0F200670659 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 		C966A4322B48A7E600670659 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		C966A4402B4B2D6C00670659 /* ListingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			children = (
 				C966A3492B3CE6F300670659 /* ListingItemView.swift */,
 				C966A38D2B3ECC1900670659 /* ListingDetailView.swift */,
+				C966A4402B4B2D6C00670659 /* ListingMapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */,
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
 				C966A3A32B4520C800670659 /* MainTabView.swift in Sources */,
+				C966A4412B4B2D6C00670659 /* ListingMapView.swift in Sources */,
 				C966A3B02B47F0F200670659 /* ExploreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

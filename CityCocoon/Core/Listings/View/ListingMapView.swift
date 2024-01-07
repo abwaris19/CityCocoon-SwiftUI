@@ -6,13 +6,35 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ListingMapView: View {
+    
+    private let listings: [Listing]
+    @State private var cameraPosition: MapCameraPosition
+    @State private var selectedListing: Listing?
+    
+    init(listings: [Listing], center: CLLocationCoordinate2D = .losAngeles) {
+        self.listings = listings
+        let coordinateRegion = MKCoordinateRegion(center: center, latitudinalMeters: 50000, longitudinalMeters: 50000)
+        self._cameraPosition = State(initialValue: .region(coordinateRegion))
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      
+        ZStack {
+            Map(position: $cameraPosition, selection: $selectedListing) {
+            
+                ForEach(listings) { listing in
+                    
+                    Marker("", coordinate: listing.)
+                }
+            }
+        }
+        
+        
     }
 }
 
 #Preview {
-    ListingMapView()
+    ListingMapView(listings: DeveloperPreview.shared.listings)
 }
