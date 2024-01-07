@@ -48,6 +48,27 @@ struct ExploreView: View {
                 .navigationDestination(for: Int.self) { listing in
                     Text("Listing detial view....")
                 }
+                .overlay(alignment:.bottom)
+                {
+                    
+                    Button(action: {
+                       
+                    }, label: {
+                        HStack  {
+                            
+                            Text("Map")
+                            Image(systemName: "paperplane")
+                            
+                        }
+                        .foregroundColor(.white)
+                        .padding(.vertical, 12)
+                        .padding(.horizontal)
+                        .background(Color.black)
+                        .clipShape(Capsule())
+                        .padding()
+                    })
+                           }
+                
             }
           
           
