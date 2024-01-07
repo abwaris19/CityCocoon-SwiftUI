@@ -10,6 +10,7 @@ import SwiftUI
 struct ExploreView: View {
     @State private var showDestinationSearchView = false
     @StateObject var viewModel = ExploreViewModel(service: ExploreService())
+    @State private var showMapView = false
   
     var body: some View {
        
@@ -53,11 +54,13 @@ struct ExploreView: View {
                     
                     Button(action: {
                        
+                        showMapView.toggle()
                     }, label: {
                         HStack  {
                             
                             Text("Map")
                             Image(systemName: "paperplane")
+                            
                             
                         }
                         .foregroundColor(.white)
@@ -67,9 +70,12 @@ struct ExploreView: View {
                         .clipShape(Capsule())
                         .padding()
                     })
-                           }
-                
+                           } .sheet(isPresented: $showMapView, content: {
+                               ListingMapView(listings: viewModel.listings)
+                           })
             }
+               
+
           
           
         }

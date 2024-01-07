@@ -13,6 +13,7 @@ struct ListingMapView: View {
     private let listings: [Listing]
     @State private var cameraPosition: MapCameraPosition
     @State private var selectedListing: Listing?
+    @Environment(\.dismiss) var dismiss
     
     init(listings: [Listing], center: CLLocationCoordinate2D = .losAngeles) {
         self.listings = listings
@@ -30,7 +31,26 @@ struct ListingMapView: View {
                         .tag(listing.id)
                 }
             }
+        }.overlay(alignment: .topLeading) {
+            
+            Button {
+                dismiss()
+            } label: {
+               
+                Image(systemName: "chevron.left")
+                    .padding()
+                    .foregroundColor(.black)
+                    .background(
+                        Circle()
+                            .fill(.white)
+                            .frame(width: 32, height: 32)
+                            .shadow(radius: 4)
+                    )
+                    
+            }.padding()
         }
+      
+
         
         
     }
