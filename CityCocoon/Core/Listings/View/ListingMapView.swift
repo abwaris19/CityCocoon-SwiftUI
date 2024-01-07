@@ -26,7 +26,8 @@ struct ListingMapView: View {
             
                 ForEach(listings) { listing in
                     
-                    Marker("", coordinate: listing.)
+                    Marker("", coordinate: listing.coordinate)
+                        .tag(listing.id)
                 }
             }
         }
