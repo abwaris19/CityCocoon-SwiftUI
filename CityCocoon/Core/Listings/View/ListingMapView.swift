@@ -25,7 +25,7 @@ struct ListingMapView: View {
         ZStack {
             Map(position: $cameraPosition, selection: $selectedListing) {
             
-                ForEach(listings) { listing in
+                ForEach(listings, id: \.self) { listing in
                     
                     Marker("", coordinate: listing.coordinate)
                         .tag(listing.id)
