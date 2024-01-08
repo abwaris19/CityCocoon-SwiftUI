@@ -13,8 +13,9 @@ struct ListingMapView: View {
     private let listings: [Listing]
     @State private var cameraPosition: MapCameraPosition
     @State private var selectedListing: Listing?
-    @Environment(\.dismiss) var dismiss
     @State private var showDetial = false
+    @Environment(\.dismiss) var dismiss
+  
     
     init(listings: [Listing], center: CLLocationCoordinate2D = .losAngeles) {
         self.listings = listings
