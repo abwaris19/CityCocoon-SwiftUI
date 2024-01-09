@@ -25,7 +25,18 @@ struct LoginView: View {
                 
                 VStack {
                     TextField("Enter your Email ", text: $email)
+                        .font(.subheadline)
+                        .padding(12)
+                        .background(Color(.systemGray6))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.horizontal, 24)
+                    
                     SecureField("Enter Your Pass", text: $password)
+                        .font(.subheadline)
+                        .padding(12)
+                        .background(Color(.systemGray6))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.horizontal, 24)
                 }
                 
                 NavigationLink {
@@ -39,9 +50,33 @@ struct LoginView: View {
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
                 }
                 
-                
+                Button  {
+                    print("DEBUG print something")
+                } label: {
+                     Text("Login")
+                        .foregroundStyle(.white)
+                        .frame(width: 350, height: 50)
+                        .background(.pink)
+                        .cornerRadius(12)
+                        .padding()
+                }
+                .padding(.vertical)
                 
                 Spacer()
+                Divider()
+                
+                NavigationLink {
+                    RegistrationView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    
+                    HStack {
+                        Text("Don't have an account?")
+                        Text("Sign Up")
+                            .fontWeight(.semibold)
+                    }.font(.footnote)
+                    
+                }.padding(.vertical)
             }
         }
     }
