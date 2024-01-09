@@ -25,18 +25,10 @@ struct LoginView: View {
                 
                 VStack {
                     TextField("Enter your Email ", text: $email)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .padding(.horizontal, 24)
+                        .modifier(PrimaryTextModifiers())
                     
                     SecureField("Enter Your Pass", text: $password)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .padding(.horizontal, 24)
+                        .modifier(PrimaryTextModifiers())
                 }
                 
                 NavigationLink {
@@ -54,11 +46,7 @@ struct LoginView: View {
                     print("DEBUG print something")
                 } label: {
                      Text("Login")
-                        .foregroundStyle(.white)
-                        .frame(width: 350, height: 50)
-                        .background(.pink)
-                        .cornerRadius(12)
-                        .padding()
+                        .modifier(PrimaryButtonModifiers())
                 }
                 .padding(.vertical)
                 

@@ -11,6 +11,8 @@
 		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
 		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
 		C9648DB42B4DEB5200E4EBA4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB32B4DEB5200E4EBA4 /* RegisterViewModel.swift */; };
+		C9648DB72B4DEFD300E4EBA4 /* PrimaryTextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB62B4DEFD300E4EBA4 /* PrimaryTextModifiers.swift */; };
+		C9648DB92B4DF0E400E4EBA4 /* PrimaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB82B4DF0E400E4EBA4 /* PrimaryButtonModifier.swift */; };
 		C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3102B3CDB9300670659 /* CityCocoonApp.swift */; };
 		C966A3132B3CDB9300670659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3122B3CDB9300670659 /* ContentView.swift */; };
 		C966A3152B3CDB9500670659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C966A3142B3CDB9500670659 /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C9648DB32B4DEB5200E4EBA4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C9648DB62B4DEFD300E4EBA4 /* PrimaryTextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextModifiers.swift; sourceTree = "<group>"; };
+		C9648DB82B4DF0E400E4EBA4 /* PrimaryButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonModifier.swift; sourceTree = "<group>"; };
 		C966A30D2B3CDB9300670659 /* CityCocoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityCocoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C966A3102B3CDB9300670659 /* CityCocoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCocoonApp.swift; sourceTree = "<group>"; };
 		C966A3122B3CDB9300670659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		C9648DB52B4DEFBC00E4EBA4 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C9648DB62B4DEFD300E4EBA4 /* PrimaryTextModifiers.swift */,
+				C9648DB82B4DF0E400E4EBA4 /* PrimaryButtonModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		C966A3042B3CDB9300670659 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,7 @@
 		C966A33F2B3CDDFF00670659 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C9648DB52B4DEFBC00E4EBA4 /* Modifiers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -530,12 +544,14 @@
 				C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */,
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
 				C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */,
+				C9648DB72B4DEFD300E4EBA4 /* PrimaryTextModifiers.swift in Sources */,
 				C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */,
 				C966A3AE2B47F04F00670659 /* ExploreViewModel.swift in Sources */,
 				C966A3132B3CDB9300670659 /* ContentView.swift in Sources */,
 				C966A3A12B451C4900670659 /* WishlistsView.swift in Sources */,
 				C966A3A72B45EF9500670659 /* Listing.swift in Sources */,
 				C966A3482B3CE65000670659 /* ExploreView.swift in Sources */,
+				C9648DB92B4DF0E400E4EBA4 /* PrimaryButtonModifier.swift in Sources */,
 				C966A47F2B4C771300670659 /* ListingMapPreviewView.swift in Sources */,
 				C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */,
 				C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */,
