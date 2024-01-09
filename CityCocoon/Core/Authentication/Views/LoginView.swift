@@ -8,8 +8,42 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @State private var email = ""
+    @State private var password = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationStack {
+            VStack{
+                Spacer()
+                Image(.airbnbAppIcon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .padding()
+                
+                VStack {
+                    TextField("Enter your Email ", text: $email)
+                    SecureField("Enter Your Pass", text: $password)
+                }
+                
+                NavigationLink {
+                    
+                } label: {
+                     Text("Forgot password")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .padding(.top)
+                        .padding(.trailing, 30)
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
+                }
+                
+                
+                
+                Spacer()
+            }
+        }
     }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */; };
+		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
+		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
+		C9648DB42B4DEB5200E4EBA4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB32B4DEB5200E4EBA4 /* RegisterViewModel.swift */; };
 		C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3102B3CDB9300670659 /* CityCocoonApp.swift */; };
 		C966A3132B3CDB9300670659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966A3122B3CDB9300670659 /* ContentView.swift */; };
 		C966A3152B3CDB9500670659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C966A3142B3CDB9500670659 /* Assets.xcassets */; };
@@ -51,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C9648DB32B4DEB5200E4EBA4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C966A30D2B3CDB9300670659 /* CityCocoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityCocoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C966A3102B3CDB9300670659 /* CityCocoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCocoonApp.swift; sourceTree = "<group>"; };
 		C966A3122B3CDB9300670659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +114,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9648DA42B4DEA5C00E4EBA4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C9648DAC2B4DEAC000E4EBA4 /* Manager */,
+				C9648DAB2B4DEAA900E4EBA4 /* Model */,
+				C9648DAA2B4DEAA600E4EBA4 /* Protocols */,
+				C9648DA92B4DEAA400E4EBA4 /* Views */,
+				C9648DA82B4DEAA100E4EBA4 /* ViewModels */,
+				C9648DA72B4DEA9E00E4EBA4 /* Services */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C9648DA72B4DEA9E00E4EBA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C9648DA82B4DEAA100E4EBA4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */,
+				C9648DB32B4DEB5200E4EBA4 /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C9648DA92B4DEAA400E4EBA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */,
+				C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9648DAA2B4DEAA600E4EBA4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C9648DAB2B4DEAA900E4EBA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9648DAC2B4DEAC000E4EBA4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		C966A3042B3CDB9300670659 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +253,7 @@
 		C966A33D2B3CDD8800670659 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C9648DA42B4DEA5C00E4EBA4 /* Authentication */,
 				C966A38F2B3ECD1C00670659 /* Component */,
 				C966A3402B3CDE8C00670659 /* Explore */,
 				C966A3412B3CDE9A00670659 /* Listings */,
@@ -456,7 +524,9 @@
 			files = (
 				C966A3912B3ECD7A00670659 /* ListingImageCarouselView.swift in Sources */,
 				C966A4332B48A7E600670659 /* Region.swift in Sources */,
+				C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */,
 				C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */,
+				C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */,
 				C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */,
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
 				C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */,
@@ -472,7 +542,9 @@
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
 				C966A3A32B4520C800670659 /* MainTabView.swift in Sources */,
 				C966A4412B4B2D6C00670659 /* ListingMapView.swift in Sources */,
+				C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */,
 				C966A3B02B47F0F200670659 /* ExploreService.swift in Sources */,
+				C9648DB42B4DEB5200E4EBA4 /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
