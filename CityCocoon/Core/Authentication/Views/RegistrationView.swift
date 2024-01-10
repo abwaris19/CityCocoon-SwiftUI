@@ -32,7 +32,7 @@ struct RegistrationView: View {
                 SecureField("Enter Your Pass", text: $password)
                     .modifier(PrimaryTextModifiers())
                 
-                TextField("Enter your FullName ", text: $email)
+                TextField("Enter your FullName ", text: $fullName)
                     .modifier(PrimaryTextModifiers())
                 
               
@@ -44,6 +44,8 @@ struct RegistrationView: View {
                     .modifier(PrimaryButtonModifiers())
             }
             .padding(.vertical)
+            .disabled(!formIsValid)
+            .opacity(formIsValid ? 1.0 : 0.7)
             
             Spacer()
             Divider()
@@ -60,6 +62,16 @@ struct RegistrationView: View {
             
            
         }
+    }
+}
+
+extension RegistrationView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty &&
+        email.contains("@") &&
+        !password.isEmpty &&
+        password.count > 5 &&
+        !fullName.isEmpty
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91B23962B4F457500BAF6F8 /* AuthenticationFormProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */; };
 		C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */; };
 		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
 		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFormProtocol.swift; sourceTree = "<group>"; };
 		C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		C9648DAA2B4DEAA600E4EBA4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				C9648DB92B4DF0E400E4EBA4 /* PrimaryButtonModifier.swift in Sources */,
 				C966A47F2B4C771300670659 /* ListingMapPreviewView.swift in Sources */,
 				C966A38C2B3E310A00670659 /* SearchAndFilterBar.swift in Sources */,
+				C91B23962B4F457500BAF6F8 /* AuthenticationFormProtocol.swift in Sources */,
 				C966A38E2B3ECC1900670659 /* ListingDetailView.swift in Sources */,
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
 				C966A3A32B4520C800670659 /* MainTabView.swift in Sources */,
