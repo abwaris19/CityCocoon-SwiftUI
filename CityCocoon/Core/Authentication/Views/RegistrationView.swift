@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    
+    @State private var email = ""
+    @State private var password = ""
+    @State private var fullName = ""
     var body: some View {
      
         VStack {
@@ -18,6 +22,19 @@ struct RegistrationView: View {
                 .frame(width: 120, height: 120)
                 .padding()
           
+            
+            
+            VStack {
+                TextField("Enter your Email ", text: $email)
+                    .modifier(PrimaryTextModifiers())
+                
+                SecureField("Enter Your Pass", text: $password)
+                    .modifier(PrimaryTextModifiers())
+                
+                TextField("Enter your FullName ", text: $email)
+                    .modifier(PrimaryTextModifiers())
+            }
+            
         }
     }
 }
