@@ -12,10 +12,11 @@ struct RegistrationView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var fullName = ""
+    @Environment(\.dismiss) var dismiss
     var body: some View {
      
         VStack {
-      
+            Spacer()
             Image(.airbnbAppIcon)
                 .resizable()
                 .scaledToFit()
@@ -34,15 +35,29 @@ struct RegistrationView: View {
                 TextField("Enter your FullName ", text: $email)
                     .modifier(PrimaryTextModifiers())
                 
-                Button  {
-                    print("DEBUG print something")
-                } label: {
-                     Text("Login")
-                        .modifier(PrimaryButtonModifiers())
-                }
-                .padding(.vertical)
-                
+              
             }
+            Button  {
+                print("DEBUG print something")
+            } label: {
+                 Text("Create Account")
+                    .modifier(PrimaryButtonModifiers())
+            }
+            .padding(.vertical)
+            
+            Spacer()
+            Divider()
+            Button {
+                dismiss()
+            } label: {
+                HStack {
+                    Text("Already have an account")
+                    Text("Sign In").fontWeight(.semibold)
+                }
+                .font(.footnote)
+            }.padding(.vertical)
+
+            
            
         }
     }
