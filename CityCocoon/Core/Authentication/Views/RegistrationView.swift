@@ -33,8 +33,17 @@ struct RegistrationView: View {
                 
                 TextField("Enter your FullName ", text: $email)
                     .modifier(PrimaryTextModifiers())
+                
+                Button  {
+                    print("DEBUG print something")
+                } label: {
+                     Text("Login")
+                        .modifier(PrimaryButtonModifiers())
+                }
+                .padding(.vertical)
+                
             }
-            
+           
         }
     }
 }
