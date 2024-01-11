@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State private var showLogin = false
     var body: some View {
         
         // Profile Login View
@@ -23,7 +25,7 @@ struct ProfileView: View {
             }
             
             Button(action: {
-                
+                showLogin.toggle()
             }, label: {
                 Text("Login")
                     .padding()
@@ -36,6 +38,8 @@ struct ProfileView: View {
                 
                 
                 
+            }).sheet(isPresented: $showLogin, content: {
+                LoginView()
             })
             
             HStack {
