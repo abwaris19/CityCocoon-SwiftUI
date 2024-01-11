@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C91B23962B4F457500BAF6F8 /* AuthenticationFormProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */; };
+		C91B23982B509ED600BAF6F8 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23972B509ED600BAF6F8 /* MockAuthService.swift */; };
 		C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */; };
 		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
 		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFormProtocol.swift; sourceTree = "<group>"; };
+		C91B23972B509ED600BAF6F8 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
 		C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		C9648DA72B4DEA9E00E4EBA4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C91B23972B509ED600BAF6F8 /* MockAuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				C966A3112B3CDB9300670659 /* CityCocoonApp.swift in Sources */,
 				C966A3A32B4520C800670659 /* MainTabView.swift in Sources */,
 				C966A4412B4B2D6C00670659 /* ListingMapView.swift in Sources */,
+				C91B23982B509ED600BAF6F8 /* MockAuthService.swift in Sources */,
 				C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */,
 				C966A3B02B47F0F200670659 /* ExploreService.swift in Sources */,
 				C9648DB42B4DEB5200E4EBA4 /* RegisterViewModel.swift in Sources */,

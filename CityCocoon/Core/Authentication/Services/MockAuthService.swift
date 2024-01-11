@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct MockAuthService {
+    
+    func login(withEmail email: String, password: String ) async throws -> String? {
+        return NSUUID().uuidString
+    }
+    
+    func createUser(withEmail email: String, password: String, fullname: String) -> String? {
+        return NSUUID().uuidString
+    }
+    
+    func singout(){}
+}
