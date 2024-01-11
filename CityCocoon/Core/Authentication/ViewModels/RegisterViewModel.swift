@@ -8,5 +8,17 @@
 import Foundation
 
 class RegisterViewModel: ObservableObject {
+    private let service: MockAuthService
+    init(service: MockAuthService) {
+        self.service = service
+    }
     
+    func createUser(withEmail email: String, password: String, fullname: String) async {
+        do {
+            try await service.login(withEmail: email, password: password)
+        }
+        catch {
+            print("Failed \(error.localizedDescription)")
+        }
+    }
 }

@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State private var email = ""
     @State private var password = ""
+    @StateObject var viewModel = LoginViewModel(service: MockAuthService())
     
     var body: some View {
         
@@ -43,7 +44,9 @@ struct LoginView: View {
                 }
                 
                 Button  {
-                    print("DEBUG print something")
+                    Task {
+                        await viewModel.login(withEmail: email, password: password)
+                    }
                 } label: {
                      Text("Login")
                         .modifier(PrimaryButtonModifiers())

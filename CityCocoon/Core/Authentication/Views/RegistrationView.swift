@@ -13,6 +13,7 @@ struct RegistrationView: View {
     @State private var password = ""
     @State private var fullName = ""
     @Environment(\.dismiss) var dismiss
+    @StateObject var registerViewModel = RegisterViewModel(service: MockAuthService())
     var body: some View {
      
         VStack {
@@ -38,7 +39,10 @@ struct RegistrationView: View {
               
             }
             Button  {
-                print("DEBUG print something")
+              
+                Task {
+                    await registerViewModel.createUser(withEmail:  email, password: password, fullname: fullName)
+                }
             } label: {
                  Text("Create Account")
                     .modifier(PrimaryButtonModifiers())
