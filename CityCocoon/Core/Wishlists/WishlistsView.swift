@@ -10,6 +10,11 @@ import SwiftUI
 struct WishlistsView: View {
     
     @State private var showLogin = false
+    
+    private let authManager: AuthManager
+    init(authManager: AuthManager) {
+        self.authManager = authManager
+    }
     var body: some View {
         
         NavigationStack {
@@ -40,7 +45,7 @@ struct WishlistsView: View {
                 
                 
             }).sheet(isPresented: $showLogin, content: {
-              LoginView()
+                LoginView(authManager: authManager)
             })
                 
             }.navigationTitle("Whislists")
@@ -52,5 +57,5 @@ struct WishlistsView: View {
 }
 
 #Preview {
-    WishlistsView()
+    WishlistsView(authManager: AuthManager(service: MockAuthService()))
 }

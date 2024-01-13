@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CityCocoonApp: App {
+    let authManager = AuthManager(service: MockAuthService())
     var body: some Scene {
         WindowGroup {
-            ExploreView()
+            ContentView(authManager: authManager)
         }
     }
 }

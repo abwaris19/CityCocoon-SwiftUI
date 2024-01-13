@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    private let authManager: AuthManager
+    
+    init(authManager: AuthManager) {
+        self.authManager = authManager
+    }
     var body: some View {
         
         TabView {
             ExploreView()
                 .tabItem {  Label("Explore", systemImage: "magnifyingglass") }
-            WishlistsView()
+            WishlistsView(authManager: authManager)
                 .
             tabItem {  Label("Explore", systemImage: "heart") }
-            ProfileView()
+            ProfileView(authManager: authManager)
                 .
             tabItem {  Label("Explore", systemImage: "person") }
         }
@@ -24,5 +30,5 @@ struct MainTabView: View {
 }
 
 #Preview {
-    MainTabView()
+    MainTabView(authManager: AuthManager(service: MockAuthService()))
 }

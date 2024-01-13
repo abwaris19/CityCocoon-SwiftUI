@@ -10,8 +10,11 @@ class AuthManager: ObservableObject {
     @Published var userSessionId: String?
     
     private let service: MockAuthService
+    
         init(service: MockAuthService) {
             self.service = service
+            
+//            self.userSessionId = NSUUID().uuidString
         }
     
     @MainActor
@@ -21,7 +24,7 @@ class AuthManager: ObservableObject {
     
     @MainActor
     func createUser (withEmail email: String, password: String, fullname: String) async throws {
-        self.userSessionId = service.createUser(withEmail: email, password: password, fullname: fullname)
+        self.userSessionId = try await service.createUser(withEmail: email, password: password, fullname: fullname)
     }
     
     @MainActor

@@ -9,47 +9,59 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    private let authManager: AuthManager
     @State private var showLogin = false
+    
+    init(authManager: AuthManager) {
+        self.authManager = authManager
+    }
+    
     var body: some View {
         
         // Profile Login View
-        VStack (alignment: .leading, spacing: 32){
-            
-            VStack {
-                VStack (alignment: .leading, spacing: 8) {
-                    Text("Profile")
-                        .font(.largeTitle)
-                        .fontWeight(.semibold)
-                    Text("Login to start your plan next trip")
+   
+        if authManager.userSessionId == nil {
+            VStack (alignment: .leading, spacing: 32){
+                
+                VStack {
+                    VStack (alignment: .leading, spacing: 8) {
+                        Text("Profile")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                        Text("Login to start your plan next trip")
+                    }
                 }
+                
+                Button(action: {
+                    showLogin.toggle()
+                }, label: {
+                    Text("Login")
+                        .padding()
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(width: 360, height: 48)
+                        .foregroundStyle(.white)
+                        .background(.red)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                    
+                    
+                }).sheet(isPresented: $showLogin, content: {
+                    LoginView(authManager: authManager)
+                })
+                
+                HStack {
+                    Text("Don't Have an Account ")
+                    
+                    Text("Sign Up")
+                        .fontWeight(.semibold)
+                        .underline()
+                    
+                }.font(.caption)
             }
-            
-            Button(action: {
-                showLogin.toggle()
-            }, label: {
-                Text("Login")
-                    .padding()
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(width: 360, height: 48)
-                    .foregroundStyle(.white)
-                    .background(.red)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-                
-                
-                
-            }).sheet(isPresented: $showLogin, content: {
-                LoginView()
-            })
-            
-            HStack {
-                Text("Don't Have an Account ")
-                
-                Text("Sign Up")
-                    .fontWeight(.semibold)
-                    .underline()
-                
-            }.font(.caption)
+        }else
+        {
+            Text("show profile stuff here..")
         }
         
         VStack (spacing: 2) {
@@ -61,5 +73,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(authManager: AuthManager(service: MockAuthService()))
 }
