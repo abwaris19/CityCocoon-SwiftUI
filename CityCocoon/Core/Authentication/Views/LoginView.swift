@@ -16,6 +16,7 @@ struct LoginView: View {
     @Environment(\.dismiss) var dismiss
     
     init(authManager: AuthManager) {
+        self.authManager = authManager
         self._viewModel = StateObject(wrappedValue: LoginViewModel(authManager: authManager))
     }
     

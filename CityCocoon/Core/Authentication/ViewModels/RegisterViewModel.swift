@@ -15,7 +15,7 @@ class RegisterViewModel: ObservableObject {
     
     func createUser(withEmail email: String, password: String, fullname: String) async {
         do {
-            try await service.login(withEmail: email, password: password)
+            try await service.createUser(withEmail: email, password: password, fullname: fullname) 
         }
         catch {
             print("Failed \(error.localizedDescription)")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @ObservedObject var authManager: AuthManager
+    private let authManager: AuthManager
     @State private var showLogin = false
     
     init(authManager: AuthManager) {
