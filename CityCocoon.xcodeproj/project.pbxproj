@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C91B23962B4F457500BAF6F8 /* AuthenticationFormProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */; };
 		C91B23982B509ED600BAF6F8 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23972B509ED600BAF6F8 /* MockAuthService.swift */; };
+		C91B239C2B52A76200BAF6F8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B239B2B52A76200BAF6F8 /* AuthManager.swift */; };
 		C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */; };
 		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
 		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		C91B23952B4F457500BAF6F8 /* AuthenticationFormProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFormProtocol.swift; sourceTree = "<group>"; };
 		C91B23972B509ED600BAF6F8 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		C91B239B2B52A76200BAF6F8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		C9648DAC2B4DEAC000E4EBA4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C91B239B2B52A76200BAF6F8 /* AuthManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C966A3912B3ECD7A00670659 /* ListingImageCarouselView.swift in Sources */,
+				C91B239C2B52A76200BAF6F8 /* AuthManager.swift in Sources */,
 				C966A4332B48A7E600670659 /* Region.swift in Sources */,
 				C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */,
 				C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */,
