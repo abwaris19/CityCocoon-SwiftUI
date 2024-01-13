@@ -13,6 +13,7 @@ struct LoginView: View {
     @State private var password = ""
     @StateObject var viewModel: LoginViewModel
     private let authManager: AuthManager
+    @Environment(\.dismiss) var dismiss
     
     init(authManager: AuthManager) {
         self._viewModel = StateObject(wrappedValue: LoginViewModel(authManager: authManager))
@@ -53,6 +54,7 @@ struct LoginView: View {
                 Button  {
                     Task {
                         await viewModel.login(withEmail: email, password: password)
+                       dismiss()
                     }
                 } label: {
                      Text("Login")

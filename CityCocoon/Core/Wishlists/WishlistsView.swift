@@ -19,36 +19,42 @@ struct WishlistsView: View {
         
         NavigationStack {
             
-        VStack (alignment: .leading, spacing:32) {
-            
-            VStack (alignment: .leading, spacing: 4){
-                Text("Log in to view your wishlists")
-                    .font(.headline)
-                Text("You can create, view or edit whistslist once you've logged in ")
-                    .font(.footnote)
-            }.padding(.horizontal)
-            
-            
-            
-            Button(action: {
-                showLogin.toggle()
-            }, label: {
-                Text("Login")
-                    .padding()
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(width: 360, height: 48)
-                    .foregroundStyle(.white)
-                    .background(.red)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            VStack {
+                
+                VStack (alignment: .leading, spacing:32) {
+                
+                VStack (alignment: .leading, spacing: 4){
+                    Text("Log in to view your wishlists")
+                        .font(.headline)
+                    Text("You can create, view or edit whistslist once you've logged in ")
+                        .font(.footnote)
+                }.padding(.horizontal)
                 
                 
                 
-            }).sheet(isPresented: $showLogin, content: {
-                LoginView(authManager: authManager)
-            })
+                Button(action: {
+                    showLogin.toggle()
+                }, label: {
+                    Text("Login")
+                        .padding()
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(width: 360, height: 48)
+                        .foregroundStyle(.white)
+                        .background(.red)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                    
+                    
+                })
                 
-            }.navigationTitle("Whislists")
+                
+                .sheet(isPresented: $showLogin, content: {
+                    LoginView(authManager: authManager)
+                })
+                    
+                }.navigationTitle("Whislists")
+            }
             
             Spacer()
             
