@@ -20,41 +20,21 @@ struct WishlistsView: View {
         NavigationStack {
             
             VStack {
-                
-                VStack (alignment: .leading, spacing:32) {
-                
-                VStack (alignment: .leading, spacing: 4){
-                    Text("Log in to view your wishlists")
-                        .font(.headline)
-                    Text("You can create, view or edit whistslist once you've logged in ")
-                        .font(.footnote)
-                }.padding(.horizontal)
-                
+                if authManager.userSessionId == nil
+                {
+                 WishListLoginView(showLogin: $showLogin)
+                }
+                else {
+                    WishlistEmptyStateView()
+                }
+               
                 
                 
-                Button(action: {
-                    showLogin.toggle()
-                }, label: {
-                    Text("Login")
-                        .padding()
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .frame(width: 360, height: 48)
-                        .foregroundStyle(.white)
-                        .background(.red)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                    
-                    
-                    
-                })
-                
-                
-                .sheet(isPresented: $showLogin, content: {
-                    LoginView(authManager: authManager)
-                })
-                    
-                }.navigationTitle("Whislists")
-            }
+            }.padding()
+            .sheet(isPresented: $showLogin, content: {
+                LoginView(authManager: authManager)
+            })
+            .navigationTitle("Whislists")
             
             Spacer()
             

@@ -16,6 +16,8 @@
 		C91B23A62B53492000BAF6F8 /* ProfileLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A52B53492000BAF6F8 /* ProfileLoginView.swift */; };
 		C91B23A82B534A0600BAF6F8 /* UserProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A72B534A0600BAF6F8 /* UserProfileHeaderView.swift */; };
 		C91B23AA2B534B1E00BAF6F8 /* CircularProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A92B534B1E00BAF6F8 /* CircularProfileView.swift */; };
+		C91B23AF2B5356F700BAF6F8 /* WishlistEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23AE2B5356F700BAF6F8 /* WishlistEmptyStateView.swift */; };
+		C91B23B12B53581100BAF6F8 /* WishListLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23B02B53581100BAF6F8 /* WishListLoginView.swift */; };
 		C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */; };
 		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
 		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
@@ -74,6 +76,8 @@
 		C91B23A52B53492000BAF6F8 /* ProfileLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginView.swift; sourceTree = "<group>"; };
 		C91B23A72B534A0600BAF6F8 /* UserProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeaderView.swift; sourceTree = "<group>"; };
 		C91B23A92B534B1E00BAF6F8 /* CircularProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileView.swift; sourceTree = "<group>"; };
+		C91B23AE2B5356F700BAF6F8 /* WishlistEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistEmptyStateView.swift; sourceTree = "<group>"; };
+		C91B23B02B53581100BAF6F8 /* WishListLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListLoginView.swift; sourceTree = "<group>"; };
 		C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -141,6 +145,37 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C91B23AB2B5356A100BAF6F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C966A3A02B451C4900670659 /* WishlistsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C91B23AC2B5356AE00BAF6F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C91B23AD2B5356B900BAF6F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C91B23B22B53591C00BAF6F8 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				C91B23AE2B5356F700BAF6F8 /* WishlistEmptyStateView.swift */,
+				C91B23B02B53581100BAF6F8 /* WishListLoginView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		C9648DA42B4DEA5C00E4EBA4 /* Authentication */ = {
@@ -381,7 +416,10 @@
 		C966A3462B3CDED900670659 /* Wishlists */ = {
 			isa = PBXGroup;
 			children = (
-				C966A3A02B451C4900670659 /* WishlistsView.swift */,
+				C91B23B22B53591C00BAF6F8 /* components */,
+				C91B23AD2B5356B900BAF6F8 /* Model */,
+				C91B23AC2B5356AE00BAF6F8 /* ViewModel */,
+				C91B23AB2B5356A100BAF6F8 /* View */,
 			);
 			path = Wishlists;
 			sourceTree = "<group>";
@@ -580,7 +618,9 @@
 				C91B239C2B52A76200BAF6F8 /* AuthManager.swift in Sources */,
 				C966A4332B48A7E600670659 /* Region.swift in Sources */,
 				C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */,
+				C91B23B12B53581100BAF6F8 /* WishListLoginView.swift in Sources */,
 				C966A39D2B43CF4000670659 /* ProfileView.swift in Sources */,
+				C91B23AF2B5356F700BAF6F8 /* WishlistEmptyStateView.swift in Sources */,
 				C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */,
 				C966A3A92B45F3D900670659 /* Developer Preview.swift in Sources */,
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
