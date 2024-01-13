@@ -13,6 +13,9 @@
 		C91B239F2B53427100BAF6F8 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B239E2B53427100BAF6F8 /* FirebaseAuthService.swift */; };
 		C91B23A22B53435F00BAF6F8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C91B23A12B53435F00BAF6F8 /* FirebaseAuth */; };
 		C91B23A42B53450100BAF6F8 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A32B53450100BAF6F8 /* AuthServiceProtocol.swift */; };
+		C91B23A62B53492000BAF6F8 /* ProfileLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A52B53492000BAF6F8 /* ProfileLoginView.swift */; };
+		C91B23A82B534A0600BAF6F8 /* UserProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A72B534A0600BAF6F8 /* UserProfileHeaderView.swift */; };
+		C91B23AA2B534B1E00BAF6F8 /* CircularProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B23A92B534B1E00BAF6F8 /* CircularProfileView.swift */; };
 		C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */; };
 		C9648DB02B4DEB2E00E4EBA4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */; };
 		C9648DB22B4DEB4600E4EBA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */; };
@@ -68,6 +71,9 @@
 		C91B239B2B52A76200BAF6F8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		C91B239E2B53427100BAF6F8 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		C91B23A32B53450100BAF6F8 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		C91B23A52B53492000BAF6F8 /* ProfileLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginView.swift; sourceTree = "<group>"; };
+		C91B23A72B534A0600BAF6F8 /* UserProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeaderView.swift; sourceTree = "<group>"; };
+		C91B23A92B534B1E00BAF6F8 /* CircularProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileView.swift; sourceTree = "<group>"; };
 		C9648DAD2B4DEB2100E4EBA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9648DAF2B4DEB2E00E4EBA4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		C9648DB12B4DEB4600E4EBA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -351,6 +357,8 @@
 			children = (
 				C966A39C2B43CF4000670659 /* ProfileView.swift */,
 				C966A39E2B43D1B200670659 /* ProfileOptionView.swift */,
+				C91B23A52B53492000BAF6F8 /* ProfileLoginView.swift */,
+				C91B23A72B534A0600BAF6F8 /* UserProfileHeaderView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -382,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				C966A3902B3ECD7A00670659 /* ListingImageCarouselView.swift */,
+				C91B23A92B534B1E00BAF6F8 /* CircularProfileView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -577,9 +586,11 @@
 				C966A34A2B3CE6F300670659 /* ListingItemView.swift in Sources */,
 				C966A39F2B43D1B200670659 /* ProfileOptionView.swift in Sources */,
 				C9648DB72B4DEFD300E4EBA4 /* PrimaryTextModifiers.swift in Sources */,
+				C91B23A82B534A0600BAF6F8 /* UserProfileHeaderView.swift in Sources */,
 				C966A3972B40CF9800670659 /* DestinationSearch.swift in Sources */,
 				C966A3AE2B47F04F00670659 /* ExploreViewModel.swift in Sources */,
 				C966A3132B3CDB9300670659 /* ContentView.swift in Sources */,
+				C91B23AA2B534B1E00BAF6F8 /* CircularProfileView.swift in Sources */,
 				C91B23A42B53450100BAF6F8 /* AuthServiceProtocol.swift in Sources */,
 				C966A3A12B451C4900670659 /* WishlistsView.swift in Sources */,
 				C966A3A72B45EF9500670659 /* Listing.swift in Sources */,
@@ -594,6 +605,7 @@
 				C966A4412B4B2D6C00670659 /* ListingMapView.swift in Sources */,
 				C91B239F2B53427100BAF6F8 /* FirebaseAuthService.swift in Sources */,
 				C91B23982B509ED600BAF6F8 /* MockAuthService.swift in Sources */,
+				C91B23A62B53492000BAF6F8 /* ProfileLoginView.swift in Sources */,
 				C9648DAE2B4DEB2100E4EBA4 /* LoginView.swift in Sources */,
 				C966A3B02B47F0F200670659 /* ExploreService.swift in Sources */,
 				C9648DB42B4DEB5200E4EBA4 /* RegisterViewModel.swift in Sources */,

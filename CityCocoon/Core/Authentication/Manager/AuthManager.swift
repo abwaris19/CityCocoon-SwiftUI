@@ -13,7 +13,7 @@ class AuthManager: ObservableObject {
     
         init(service: AuthServiceProtocol) {
             self.service = service
-            
+            self.userSessionId = "1234"
 //            self.userSessionId = NSUUID().uuidString
         }
     

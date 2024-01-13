@@ -9,7 +9,24 @@ import SwiftUI
 
 struct UserProfileHeaderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RoundedRectangle(cornerRadius: 28)
+                .fill(.white)
+                .frame(width: 300, height: 200)
+                .shadow(radius: 10)
+            
+            VStack (spacing: 12) {
+                
+                CircularProfileView(size: .large)
+                
+                VStack {
+                    Text("AB Devlier")
+                    Text("Guest")
+                        .font(.footnote)
+                }
+            }
+        }
+      
     }
 }
 

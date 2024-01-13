@@ -21,54 +21,38 @@ struct ProfileView: View {
         // Profile Login View
    
         if authManager.userSessionId == nil {
-            VStack (alignment: .leading, spacing: 32){
-                
-                VStack {
-                    VStack (alignment: .leading, spacing: 8) {
-                        Text("Profile")
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                        Text("Login to start your plan next trip")
-                    }
-                }
-                
-                Button(action: {
-                    showLogin.toggle()
-                }, label: {
-                    Text("Login")
-                        .padding()
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .frame(width: 360, height: 48)
-                        .foregroundStyle(.white)
-                        .background(.red)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                    
-                    
-                    
-                }).sheet(isPresented: $showLogin, content: {
-                    LoginView(authManager: authManager)
-                })
-                
-                HStack {
-                    Text("Don't Have an Account ")
-                    
-                    Text("Sign Up")
-                        .fontWeight(.semibold)
-                        .underline()
-                    
-                }.font(.caption)
-            }
+            
+            ProfileLoginView(showLogin: $showLogin)
+            
         }else
         {
-            Text("show profile stuff here..")
+            UserProfileHeaderView()
         }
         
         VStack (spacing: 2) {
             ProfileOptionView(imageName: "gear", title: "Settings")
             ProfileOptionView(imageName: "gear", title: "Accessibility")
             ProfileOptionView(imageName: "questionmark.circle", title: "Visit the Help Center")
+        }.padding(.vertical)
+        
+       
+        if authManager.userSessionId != nil
+        {
+            
+            
+            Button(action: {
+                authManager.signout()
+            }, label: {
+                Text("Log Out")
+                    .underline()
+                    .foregroundStyle(.black)
+                    .font(.headline)
+                    .padding(.horizontal)
+            })
+            .frame(maxWidth:.infinity, alignment: .leading)
         }
+            
+            
     }
 }
 

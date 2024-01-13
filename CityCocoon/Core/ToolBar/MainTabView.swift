@@ -19,12 +19,16 @@ struct MainTabView: View {
         TabView {
             ExploreView()
                 .tabItem {  Label("Explore", systemImage: "magnifyingglass") }
+            
+            
             WishlistsView(authManager: authManager)
                 .
-            tabItem {  Label("Explore", systemImage: "heart") }
+            tabItem {  Label("Whishlists", systemImage: "heart") }
+            
             ProfileView(authManager: authManager)
                 .
-            tabItem {  Label("Explore", systemImage: "person") }
+            tabItem {  Label("Profile", systemImage: "person") }
+         
         }
     }
 }
