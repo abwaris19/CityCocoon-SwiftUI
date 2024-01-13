@@ -9,9 +9,9 @@ import Foundation
 class AuthManager: ObservableObject {
     @Published var userSessionId: String?
     
-    private let service: MockAuthService
+    private let service: AuthServiceProtocol
     
-        init(service: MockAuthService) {
+        init(service: AuthServiceProtocol) {
             self.service = service
             
 //            self.userSessionId = NSUUID().uuidString

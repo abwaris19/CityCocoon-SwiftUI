@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MockAuthService {
+struct MockAuthService: AuthServiceProtocol {
 
     
     func login(withEmail email: String, password: String ) async throws -> String? {

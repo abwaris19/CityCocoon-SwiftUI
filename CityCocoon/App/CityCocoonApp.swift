@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CityCocoonApp: App {
-    let authManager = AuthManager(service: MockAuthService())
+    let authManager = AuthManager(service: FirebaseAuthService())
     var body: some Scene {
         WindowGroup {
             ContentView(authManager: authManager)
