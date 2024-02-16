@@ -5,7 +5,7 @@ Overall, CityCocoon offers a user-friendly and practical solution for house sear
 
 
 Explore View 
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 07 35](https://github.com/abwaris19/CityCocoon/assets/143792601/90677931-0978-41d3-8ca6-b282e824db1f)
+<![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 07 35](https://github.com/abwaris19/CityCocoon/assets/143792601/90677931-0978-41d3-8ca6-b282e824db1f) width = 200 height = 200>
 
 
 
