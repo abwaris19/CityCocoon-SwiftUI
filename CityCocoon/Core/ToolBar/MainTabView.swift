@@ -25,9 +25,9 @@ struct MainTabView: View {
                 .
             tabItem {  Label("Whishlists", systemImage: "heart") }
             
-            ProfileView(authManager: authManager)
-                .
-            tabItem {  Label("Profile", systemImage: "person") }
+//            ProfileView(authManager: authManager)
+//                .
+//            tabItem {  Label("Profile", systemImage: "person") }
          
         }
     }
