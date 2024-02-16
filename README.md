@@ -4,22 +4,21 @@ The application also provides filtering options, enabling users to narrow down t
 Overall, CityCocoon offers a user-friendly and practical solution for house searching, whether through the map view or traditional list view.
 
 
-Explore View 
+ 
 
 
 
-<img src = "https://github.com/abwaris19/CityCocoon/assets/143792601/90677931-0978-41d3-8ca6-b282e824db1f" width = 200 height = 400>
-
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 08 21](https://github.com/abwaris19/CityCocoon/assets/143792601/f11a8a1e-e2af-43b7-9dd3-0f001f4c1928)
-
-
-Listings
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 08 17](https://github.com/abwaris19/CityCocoon/assets/143792601/2d294002-216d-48d7-94b2-4ae469890072)
-
-
-Destination Search
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 08 47](https://github.com/abwaris19/CityCocoon/assets/143792601/0a117cde-b33f-47e2-83f3-4d65ea50c708)
-
-Explore Map View
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 08 56](https://github.com/abwaris19/CityCocoon/assets/143792601/2748de7d-5da5-4663-8a60-8ec140c9f518)
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 09 00](https://github.com/abwaris19/CityCocoon/assets/143792601/1bc958a4-08ab-45f4-835f-41fa0167dd99)
+<table>
+  <tr>
+    <td><img src="https://github.com/abwaris19/CityCocoon/assets/143792601/90677931-0978-41d3-8ca6-b282e824db1f" width="200" height="400" alt = "Explore View"></td>
+    <td><img src="https://github.com/abwaris19/CityCocoon/assets/143792601/f11a8a1e-e2af-43b7-9dd3-0f001f4c1928" alt="Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 08 21"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/abwaris19/CityCocoon/assets/143792601/2d294002-216d-48d7-94b2-4ae469890072" alt="Listings"></td>
+    <td><img src="https://github.com/abwaris19/CityCocoon/assets/143792601/0a117cde-b33f-47e2-83f3-4d65ea50c708" alt="Destination Search"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/abwaris19/CityCocoon/assets/143792601/2748de7d-5da5-4663-8a60-8ec140c9f518" alt="Explore Map View"></td>
+    <td><img src="https://github.com/abwaris19/CityCocoon/assets/143792601/1bc958a4-08ab-45f4-835f-41fa0167dd99" alt="Simulator Screenshot - iPhone 15 Pro Max - 2024-02-16 at 20 09 00"></td>
+  </tr>
+</table>
